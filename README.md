@@ -25,3 +25,17 @@ Requirements
 -----------------
  * odfpy 0.9.3 or 1.3.0
  * python 2.7 or 3.4
+
+Utilities
+-----------------
+Some extra utilities have been added.
+
+**keyval_sheet_to_dict(sheet, sheetname, funcs=None)**
+Produces a dictionary from a worksheet, using a list of functions, typically [str, int]. _sheet_ is an ODSReader().
+
+**dict_sheet_to_dict_of_dicts(sheet, sheetname, keys, funcs=None, nones='fill')**
+This creates a dict of dicts of any depth. If you have one key then the rest of the row will become a dictionary keyed to the named column. If you have multiple keys then each of the first key will be divided by unique secondary keys, etc.
+
+**dict_sheet_to_dict_of_objs(sheet, sheetname, objclass, keys=None, funcs=None, nones='fill')**
+
+
